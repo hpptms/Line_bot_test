@@ -21,9 +21,9 @@ class App < Sinatra::Base
       RestClient.proxy = ENV["FIXIE_URL"]
       RestClient.post(endpoint_uri, content_json, {
         'Content-Type' => 'application/json; charset=UTF-8',
-        'X-Line-ChannelID' => ENV["1462546557"],
-        'X-Line-ChannelSecret' => ENV["bcf5d84a55322410d56e5105554a2d08"],
-        'X-Line-Trusted-User-With-ACL' => ENV["u7ef6299df0c7632dc34cd6b5e8e319f7"],
+        'X-Line-ChannelID' => ENV["LINE_CHANNEL_ID"],
+        'X-Line-ChannelSecret' => ENV["LINE_CHANNEL_SECRET"],
+        'X-Line-Trusted-User-With-ACL' => ENV["LINE_CHANNEL_MID"],
       })
     end
 
